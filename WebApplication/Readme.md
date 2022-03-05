@@ -2,8 +2,8 @@
 ## ESCUELA COLOMBIANA DE INGENIERÍA
 ## INTRODUCCIÓN A PROYECTOS WEB
 ###Integrantes:
-###Yesid Carrillo
-###Ronaldo Henao
+### Yesid Carrillo
+### Ronaldo Henao
 
 Usamos el siguiente comando para crear el arquetipo:
 
