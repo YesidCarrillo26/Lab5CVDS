@@ -1,7 +1,7 @@
 ## TALLER 5
 ## ESCUELA COLOMBIANA DE INGENIERÍA
 ## INTRODUCCIÓN A PROYECTOS WEB
-###Integrantes:
+### Integrantes:
 ### Yesid Carrillo
 ### Ronaldo Henao
 
@@ -11,6 +11,6 @@ Usamos el siguiente comando para crear el arquetipo:
 
 una vez hechas las configuraciones en el pom cargamos el servidor con:
 
-``mvn package`` 
+```mvn package``` 
 
-``mvn tomcat7:run``
+```mvn tomcat7:run```
