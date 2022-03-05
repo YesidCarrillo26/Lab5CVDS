@@ -7,7 +7,7 @@
 
 Usamos el siguiente comando para crear el arquetipo:
 
-``mvn archetype:generate -DgroupId=edu.eci.cvds -DartifactId=WebApplication -DarchetypeArtifactId=maven-archetype-webapp-Dpackage=edu.eci.cvds.servlet -DinteractiveMode=false ``
+```mvn archetype:generate -DgroupId=edu.eci.cvds -DartifactId=WebApplication -DarchetypeArtifactId=maven-archetype-webapp-Dpackage=edu.eci.cvds.servlet -DinteractiveMode=false```
 
 una vez hechas las configuraciones en el pom cargamos el servidor con:
 
