@@ -14,3 +14,9 @@ una vez hechas las configuraciones en el pom cargamos el servidor con:
 ```mvn package``` 
 
 ```mvn tomcat7:run```
+
+Cargamos en la pagina la direccion:
+
+```http://localhost:8080/helloServlet?name=Yesid```
+
+donde el name es la variable del servlet ubicado en la clase SampleServlet.
