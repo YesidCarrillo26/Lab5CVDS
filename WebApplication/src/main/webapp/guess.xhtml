@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui" >
+
+<h:head>
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="design.css"/>
+</h:head>
+<h:body>
+    <h:form id="guess_form">
+        <p:inputText id="lista" type="text" binding="#{input}"/>
+        <h:panelGrid columns="2">
+
+            <p:outputLabel class="invisible" value="Numero:"/>
+            <p:outputLabel class="invisible" value="#{gameCalculator.number}"/>
+
+            <p:outputLabel value="Numero de intentos"/>
+            <p:outputLabel value="#{gameCalculator.number}"/>
+            <p:outputLabel value="Estado del juego"/>
+            <p:outputLabel value="#{gameCalculator.number}"/>
+            <p:outputLabel value="Premio"/>
+            <p:outputLabel value="#{gameCalculator.number}"/>
+            <p:commandButton value="Intento" update="guess_form" actionListener="#{gameCalculator.intento}"/>
+            <p:commandButton value="Reiniciar" update="guess_form" actionListener="#{gameCalculator.restart}"/>
+        </h:panelGrid>
+
+    </h:form>
+</h:body>
+</html>

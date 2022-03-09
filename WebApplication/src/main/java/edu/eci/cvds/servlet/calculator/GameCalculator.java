@@ -1,14 +1,36 @@
 package edu.eci.cvds.servlet.calculator;
 
-import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.ManagedBean;
+import javax.swing.JOptionPane;
+
+import java.lang.Math;
 import java.util.ArrayList;
+
+import static java.lang.Math.sqrt;
+
 
 @ManagedBean(name = "gameCalculator")
 @ApplicationScoped
 public class GameCalculator {
+    private ArrayList<Double> numbers;
+    private double mode;
+    private double mean;
+    private double variance;
+    private double standar;
+    private int length;
 
-    public void CalculadoraBean (String list) {
+    private int number;
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void mGameCalculator (String list) {
         try {
             numbers = new ArrayList<Double>();
             String[] array = list.split(";");
@@ -37,6 +59,9 @@ public class GameCalculator {
     }
     public void calculateStandardDeviation(ArrayList<Double> list){
         standar = Math.sqrt(calculateVariance(list));
+        if (list.size() == 1){
+            standar = list.get(0);
+        }
     }
     /**
      *
@@ -50,6 +75,9 @@ public class GameCalculator {
             act +=  Math.pow(mean - number,2f);
         }
         variance = act/(length-1);
+        if (list.size() == 1){
+            variance = 0;
+        }
         return variance;
     }
 
@@ -80,59 +108,52 @@ public class GameCalculator {
 
     }
 
-
     public ArrayList<Double> getNumbers() {
         return numbers;
+    }
+
+    public void setNumbers(ArrayList<Double> numbers) {
+        this.numbers = numbers;
+        setLength(numbers.size());
     }
 
     public double getMode() {
         return mode;
     }
 
-    public void setNumbers(ArrayList<Double> numbers) {
-        this.numbers = numbers;
-    }
-
     public void setMode(double mode) {
         this.mode = mode;
-    }
-
-    public void setMean(double mean) {
-        this.mean = mean;
-    }
-
-    public void setVariance(double variance) {
-        this.variance = variance;
-    }
-
-    public void setStandar(double standar) {
-        this.standar = standar;
-    }
-
-    public void setLength(int length) {
-        this.length = length;
     }
 
     public double getMean() {
         return mean;
     }
 
+    public void setMean(double mean) {
+        this.mean = mean;
+    }
+
     public double getVariance() {
         return variance;
     }
 
-    public double getStandar() {
-        return standar;
+    public void setVariance(double variance) {
+        this.variance = variance;
     }
 
     public int getLength() {
         return length;
     }
 
-    private ArrayList<Double> numbers;
-    private double mode;
-    private double mean;
-    private double variance;
-    private double standar;
-    private int length;
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public double getStandar() {
+        return standar;
+    }
+
+    public void setStandar(double standar) {
+        this.standar = standar;
+    }
 }
