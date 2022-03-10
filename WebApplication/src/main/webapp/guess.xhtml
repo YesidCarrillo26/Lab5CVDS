@@ -13,20 +13,28 @@
     <h:form id="guess_form">
         <p:inputText id="lista" type="text" binding="#{input}"/>
         <h:panelGrid columns="2">
-
             <p:outputLabel class="invisible" value="Numero:"/>
-            <p:outputLabel class="invisible" value="#{gameCalculator.load}"/>
-
+            <p:outputLabel class="invisible" value="#{guessBean.numberGuessing}"/>
             <p:outputLabel value="Numero de intentos"/>
-            <p:outputLabel value="#{gameCalculator.number}"/>
+            <p:outputLabel value="#{guessBean.numIntentos}"/>
             <p:outputLabel value="Estado del juego"/>
-            <p:outputLabel value="#{gameCalculator.number}"/>
+            <p:outputLabel value="#{guessBean.gameState}"/>
             <p:outputLabel value="Premio"/>
-            <p:outputLabel value="#{gameCalculator.number}"/>
-            <p:commandButton value="Intento" update="guess_form" actionListener="#{gameCalculator.intento(input.value)}"/>
-            <p:commandButton value="Reiniciar" update="guess_form" actionListener="#{gameCalculator.restart}"/>
+            <p:outputLabel value="#{guessBean.premio}"/>
+            <p:commandButton resetValues="true" value="Intento" update="guess_form" actionListener="#{guessBean.intento(input.value)}"/>
+            <p:commandButton value="Reiniciar" update="guess_form" actionListener="#{guessBean.restart()}"/>
         </h:panelGrid>
+        <p:outputLabel value="notificacion:"/>
+        <p:outputLabel value="#{guessBean.error}"/>
+        <p:dataTable var="tintentos" value="#{guessBean.intentos}">
+            <p:column headerText="Intento #">
+                <h:outputText value="#{tintentos.numberIntento}" />
+            </p:column>
 
+            <p:column headerText="Valor">
+                <h:outputText value="#{tintentos.value}" />
+            </p:column>
+        </p:dataTable>
     </h:form>
 </h:body>
 </html>
