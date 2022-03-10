@@ -2,12 +2,10 @@ package edu.eci.cvds.servlet.calculator;
 
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
-import javax.swing.JOptionPane;
 
-import java.lang.Math;
+
 import java.util.ArrayList;
-
-import static java.lang.Math.sqrt;
+import java.util.Random;
 
 
 @ManagedBean(name = "gameCalculator")
@@ -15,9 +13,37 @@ import static java.lang.Math.sqrt;
 public class GameCalculator {
     private int numIntentos;
     private boolean gameState;
-    private int premio;
+    private int premio = 100000;
+    private int numberGuessing;
     private ArrayList<Integer> intentos;
 
+    public void load(){
+        Random r = new Random();
+        numberGuessing = r.nextInt(100);
+    }
+    public void intento(String number){
+        try {
+            int numero = Integer.parseInt(number);
+            intentos.add(numero);
+            numIntentos++;
+            checkState(numero);
+        }
+        catch (Exception e){
+
+        }
+    }
+
+    private void restart() {
+
+    }
+
+    public void checkState(int check){
+        if (check == numberGuessing) gameState = true;
+        else {
+            gameState = false;
+            premio -= 10000;
+        }
+    }
 
     public int getNumIntentos() {
         return numIntentos;
@@ -42,15 +68,7 @@ public class GameCalculator {
     public void setPremio(int premio) {
         this.premio = premio;
     }
-    /*
-    public void guess {
 
-    }
-
-    public void restart{
-
-    }
-    */
     public void CalculadoraBean (String number) {
         try {
             Integer.parseInt(number);

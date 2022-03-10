@@ -15,7 +15,7 @@
         <h:panelGrid columns="2">
 
             <p:outputLabel class="invisible" value="Numero:"/>
-            <p:outputLabel class="invisible" value="#{gameCalculator.number}"/>
+            <p:outputLabel class="invisible" value="#{gameCalculator.load}"/>
 
             <p:outputLabel value="Numero de intentos"/>
             <p:outputLabel value="#{gameCalculator.number}"/>
@@ -23,7 +23,7 @@
             <p:outputLabel value="#{gameCalculator.number}"/>
             <p:outputLabel value="Premio"/>
             <p:outputLabel value="#{gameCalculator.number}"/>
-            <p:commandButton value="Intento" update="guess_form" actionListener="#{gameCalculator.intento}"/>
+            <p:commandButton value="Intento" update="guess_form" actionListener="#{gameCalculator.intento(input.value)}"/>
             <p:commandButton value="Reiniciar" update="guess_form" actionListener="#{gameCalculator.restart}"/>
         </h:panelGrid>
 
