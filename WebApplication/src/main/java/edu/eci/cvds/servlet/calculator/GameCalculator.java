@@ -34,7 +34,9 @@ public class GameCalculator {
     }
 
     private void restart() {
-
+        numIntentos = 0;
+        intentos.clear();
+        premio = 100000;
     }
 
     public void checkState(int check){
