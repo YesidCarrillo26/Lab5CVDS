@@ -6,7 +6,7 @@
 ### Ronaldo Henao
 
 1. Conexion telnet www.escuelaing.edu.co 80\
-![](4.jpeg)
+![](4.jpeg)\
 Al realizar esa consulta sale el error 400 de tipo bad request
 * Otros tipos de errores:
 1. Informacion 100
@@ -16,7 +16,7 @@ Al realizar esa consulta sale el error 400 de tipo bad request
 2. Conexion telnet www.httpbin.org 80\
 ![](1.png)
 3. wc -c\
-![](3.jpeg)
+![](5.jpeg)
 numero de lineas dela rchivo HTML
 * Diferencias entre GET y POST:
 El metodo GET solicita una representacion de un recurso especifico
@@ -29,6 +29,7 @@ El metodo POST es utilizado para enviar una entidad a un recurso en especifico
 5. OPTIONS
 6. TRACE
 7. PATCH
+
 4.
 * curl www.httpbin.org
 * curl -v www.httpbin.org\
