@@ -16,11 +16,11 @@ Al realizar esa consulta sale el error 400 de tipo bad request
 2. Conexion telnet www.httpbin.org 80\
 ![](1.png)
 3. wc -c\
-![](5.jpeg)
-numero de lineas dela rchivo HTML
-* Diferencias entre GET y POST:
-El metodo GET solicita una representacion de un recurso especifico
-El metodo POST es utilizado para enviar una entidad a un recurso en especifico
+![](5.jpeg)\
+numero de lineas del archivo HTML
+* Diferencias entre GET y POST:\
+El metodo GET solicita una representacion de un recurso especifico\
+El metodo POST es utilizado para enviar una entidad a un recurso en especifico\
 * Otros metodos:
 1. HEAD
 2. PUT
