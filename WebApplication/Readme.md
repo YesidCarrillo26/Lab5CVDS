@@ -5,7 +5,7 @@
 ### Yesid Carrillo
 ### Ronaldo Henao
 
-1. Conexion telnet www.escuelaing.edu.co 80
+1. Conexion telnet www.escuelaing.edu.co 80/
 ![](4.jpeg)
 Al realizar esa consulta sale el error 400 de tipo bad request
 * Otros tipos de errores:
